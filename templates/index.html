@@ -1,0 +1,93 @@
+{% load staticfiles %}
+<!DOCTYPE html>
+ <html lang="en" data-type="background" data-speed="7">
+  <head>
+    <meta charset="utf-8" >
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"> 
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Malve-Made in Germany</title>
+    <link href="{% static 'css/font-awesome.min.css' %}" rel="stylesheet">
+    <link type="text/css" href="{% static 'css/m_auto_navbar.css' %}" rel="stylesheet">
+    <link href="{% static 'css/style.css' %}" rel="stylesheet">
+    <link href="{% static 'css/notcourier.css' %}" rel="stylesheet" type="text/css">
+    <script type="text/javascript">
+var _gaq = _gaq || [];
+_gaq.push(['_setAccount', 'UA-7243260-2']);
+_gaq.push(['_trackPageview']);
+(function() {
+var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+})();
+    </script>
+  </head>
+  <body>
+    <div class="container">
+      <div class="main-header">
+		<div class="cbp-af-inner">
+		  <h4 class="h4"><a class="h4" href="{% url 'index' %}">Malve</h4>          
+		  <nav class="nav-main">      
+			<a href="#about_powder">{{ nav_buttons1.name }}</a>                        
+			<a href="#products:powder_list">{{ nav_buttons2.name }}</a>         
+            <a href="#contacts">{{ nav_buttons3.name }}</a>
+            <a class="feedback" href="{% url 'feedback' %}"><i class="fa fa-send"></i> {{ nav_buttons5.name }}</a>
+		  </nav>
+		</div>
+	  </div>
+    </div>
+    <div class="background-color-main-content" data-type="background" data-speed="7">
+            <h3>MADE IN GERMANY</h3>
+            <p>Пральні порошки з Німеччини</p>
+      </div>
+      <a name="about_powder"><div class="about_powder">
+        {% for about_powder in about_powder %}
+        <p class="about_powder_name">{{ about_powder.name }}</p>
+        <p class="about_powder_description">{{ about_powder.description }}</p>
+        {% endfor %}
+      </div></a>
+      <a name="products:powder_list"><div class="product_powder" data-type="background" data-speed="7">
+          {% for about_powder in about_powder %}
+          <p class="powder_propose">{{ about_powder.propose }}</p>
+          {% endfor %}
+          {% for powder in powder %}
+          <table class="product_table">
+    <tr>
+        <td rowspan="2"><h1>{{ powder.name }}</h1>
+          <img class="malve-img" src="{{ powder.photo.url }}">
+          </td>
+        <td><ul class="powder_characteristic">
+            <li>{{ powder.powder_type }}</li>
+            <li>{{ powder.auto }}</li>
+            <li>{{ powder.packing }}</li>
+          </ul></td>
+        <td rowspan="2"><p class="powder_description">{{ powder.description }}</p></td>
+    </tr>
+    <tr>
+        <td><li id="powder_price">{{ powder.price_retail }} грн.</li></td>
+    </tr>
+</table>
+          {% endfor %}
+      </div></a>
+      <a name="contacts"><div class="contacts">
+        <p class="email_title">Пишіть нам на e-mail</p>
+        {% for contacts in contacts %}
+        <a href="{% url 'feedback' %}"><p class="contacts_email">{{ contacts.email }}</p></a>
+        <p class="phone_title">Наші контакти</p>
+        <p class="contacts_phone">{{ contacts.phone_1 }}; {{ contacts.phone_2 }}; {{ contacts.phone_3 }}</p>
+        {% endfor %}
+      </div></a>
+      <div class="cooperate">
+        <p class="cooperate_info"><a class="btn-appointment" href="{% url 'call_order' %}" role="button">заказать звонок</a></p>
+      </div>
+      <div class="footer">
+        <p class="footer_info">Наши Контакти</p>
+      </div>
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="{% static 'js/jquery-1.11.3.min.js' %}"></script>
+    <script src="{% static 'js/m_auto.js' %}"></script>	
+    <script src="{% static 'js/m_auto_navigation.min.js' %}"></script>  
+    <script src="{% static 'js/background.js' %}"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+  </body>
+</html>

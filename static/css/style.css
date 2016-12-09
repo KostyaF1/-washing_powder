@@ -1,0 +1,273 @@
+@import url(http://fonts.googleapis.com/css?family=Lato:300,400,700 rel='stylesheet' type='text/css');
+@font-face {
+  font-family: Mistral;
+  src: url('../fonts/Mistral.ttf');
+}
+@font-face {
+  font-family: 'Drugs';
+  src: url('../fonts/Drugs.otf');
+}
+
+*, *:after, *:before { -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box; }
+body, html { font-size: 100%; padding: 0; margin: 0; width: 100%;
+    height: 100%;}
+
+html {
+  font-family: sans-serif;
+  -webkit-text-size-adjust: 100%;
+      -ms-text-size-adjust: 100%;
+    
+}
+
+body {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    background-attachment: fixed;
+    background-size: cover;
+    background-image: url('../images/trees.jpg');
+}
+
+.background-color-main-content, .about_powder, .product_powder, .cooperate, .contacts, .footer {
+  vertical-align:top;
+  width:100%;
+  height: 100%;
+  display:inline-block;
+}
+
+/* for index.html main page */
+
+.background-color-main-content {
+  background-color: rgba(26, 25, 25, 0.5);
+  color: black;
+}
+
+.background-color-main-content h3 {
+  margin-top: 32%;  
+  color: #EBD3F0;  
+  font-size: 1.8em;
+  font-weight:0;
+  letter-spacing: 50px;
+  text-align: center;
+  font-family: 'Drugs';
+}
+
+.background-color-main-content p {
+  margin-top: 4%;  
+  color: #EBD3F0;  
+  font-size: 1.3em;
+  font-weight: 100;
+  letter-spacing: 15px;
+  text-align: center;
+  font-family: 'Drugs';
+}
+
+@media screen and (min-width: 768px) {
+  .main-content {
+    padding-top: 48px;
+    padding-bottom: 48px;
+  }
+  .container .main-content,
+  .container-fluid .main-content {
+    padding-right: 60px;
+    padding-left: 60px;
+  }
+  .main-content h1,
+  .main-content .h1 {
+    font-size: 63px;
+  }
+}
+
+/* for about_powder page */
+
+.about_powder {
+  background-color: rgba(255, 255, 255, 1);
+  border-bottom-width: 0.5px;
+  border-bottom-style: solid; 
+  border-bottom-color: #ccc;
+}
+
+.about_powder .about_powder_name {
+  color: black;
+  margin-top: 10%;
+  font-size: 28px;
+  margin-left: 5%;
+  letter-spacing: 5px;
+  font-family: 'NotCourier';
+}
+
+.about_powder .about_powder_description {
+  margin-top: 5%;
+  /*font-size: 60%;*/
+  margin-left: 5%;
+  font-family: 'Drugs';
+  letter-spacing: 0.1px;
+  color: rgba(26, 25, 25, 0.9);
+    -webkit-column-width: 200px;
+    -moz-column-width: 200px;
+    column-width: 200px;
+    -webkit-column-count: 3;
+    -moz-column-count: 3;
+    column-count: 3;
+    -webkit-column-gap: 30px;
+    -moz-column-gap: 30px;
+    column-gap: 30px;
+    -webkit-column-rule: 1px solid #ccc;
+    -moz-column-rule: 1px solid #ccc;
+    column-rule: 1px solid #ccc;
+
+}
+/* for powder_list.html */
+
+.product_powder {
+  height: auto;
+  background-color: rgba(242, 233, 208, 1);
+}
+
+.product_powder .powder_propose {
+  text-align: center;
+  margin-top: 7%;
+  font-size: 1.7em;
+  letter-spacing: -0.1px;
+  font-family: 'Drugs';
+  color: black;
+}
+
+.product_powder .product_table {
+  margin-left: 5%;
+}
+
+.product_powder h1 {
+  font-size: 1em;
+  font-family: 'Drugs';
+}
+
+.product_powder .malve-img {
+  height: 120px;
+  width: 160px;
+  padding: 5px;
+}
+
+.product_powder .powder_characteristic {
+  font-size: 12px;
+  color: black;
+}
+
+.product_powder #powder_price {
+  list-style-type: none;
+  padding: 5px;
+  font-size: 12px;
+  background-color: rgba(105, 204, 65, 1);
+}
+
+.product_powder .powder_description {
+  padding: 5px;
+  font-size: 0.8em;
+  width: 52em;
+  font-family: 'Drugs';
+}
+
+.contacts {
+  background-image: url('../images/pexels-photo-64774-large.jpeg');
+  background-attachment: fixed;
+  background-size: cover; 
+  height: 60%;
+}
+
+.contacts .phone_title { 
+  text-align: center;
+  color: white;
+  font-size: 25px;
+  letter-spacing: 5px;
+  font-family: 'NotCourierSans';
+}
+
+.contacts .contacts_phone {
+  text-align: center; 
+  color: white;
+  font-size: 20px;
+  letter-spacing: 2px;
+  font-family: 'Drugs';
+}
+
+.contacts .email_title { 
+  margin-top: 6%;
+  color: white;
+  text-align: center;
+  font-size: 30px;
+  letter-spacing: 5px;
+  font-family: 'NotCourierSans';
+}
+
+.contacts .contacts_email { 
+  color: white;
+  text-align: center;
+  font-size: 40px;
+  letter-spacing: 5px;
+  font-family: 'Drugs';
+}
+a { 
+  text-decoration: none;
+}
+
+.cooperate {
+  background-color: black;
+  background-attachment: fixed;
+  background-size: cover;
+  height: 33%;
+}
+
+.cooperate  .cooperate_info { 
+  text-align: center;
+  margin-top: 10%;
+}
+
+.cooperate .btn-appointment {
+  border: none;
+  text-transform: uppercase;
+  color: #3E4651;
+  background-color: #FC4444;
+  font-size: 15px;
+  font-style: 'Drugs';
+  letter-spacing: 5px;
+  padding: 20px;
+}
+
+.btn-appointment:hover {
+  color: #EBD3F0;
+  opacity: 0.95;
+  background-color: #3E4651;
+  border-radius: none;
+  text-decoration: none;
+  padding: 20px;
+}
+
+.footer {
+  height: 67%;
+  background-color: rgba(242, 233, 208, 1);
+  background-attachment: fixed;
+  background-size: cover;
+}
+
+.footer .footer_info { 
+  color: black;
+  width: 100%;
+  background-color: none;            /*rgba(116, 154, 242, 0.4);*/
+  margin-top: 100px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
